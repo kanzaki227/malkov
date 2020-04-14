@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Malkov</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="header__title">
+      </div>
+      <div class="header__right">
+          <%= link_to "TOP", '/', class: "header__right--btn" %>
+          <%= link_to "新規投稿", new_post_path, class: "header__right--btn" %>
+      </div>
+    </div>
+    <div class="contents">
+      <%= yield %>
+    </div>
+  </body>
+</html>
+
