@@ -1,14 +1,11 @@
   <div class="content">
     <div class="content__left">
-      <div class="content__left--image"></div>
+      <%# <div class="content__left--image"></div> %>
     </div>
     <div class="content__right">
       <div class="content__right__top">
         <%= link_to post.title, post_path(post.id), class: "content__right__top--title" %>
-      </div>
-      <div class="content__right__bottom">
-        <div class="content__right__bottom--userName">
-        </div>
+        <%= link_to "❌", post_path(post.id), method: :delete %>
       </div>
     </div>
   </div>

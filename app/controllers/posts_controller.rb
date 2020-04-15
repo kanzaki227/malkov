@@ -15,10 +15,15 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     content = @post.content
-    malcov = content.split(/\n|\r|\s|。|、/)
-    @post.content = malcov.shuffle
+    marcov = content.split(/\n|\r|\s|。|、/)
+    splitmarkov = marcov.shuffle
+    @post.content = splitmarkov.join
   end
-
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy
+    redirect_to root_path
+  end
 
 
 private
