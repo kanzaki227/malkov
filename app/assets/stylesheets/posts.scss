@@ -34,9 +34,8 @@ body{
     width: 70%;
     overflow: scroll;
     .content{
-      padding: 10px;
-      border-bottom: 1px solid #f6f6f6;
-      display: flex;
+      padding: 10px 20px 10px 25px;
+      border-bottom: 1px solid #dce6c5;
       &__left{
         padding-right: 20px;
         &--image{
@@ -46,13 +45,15 @@ body{
         }
       }
       &__right{
-        width: calc(100%-100px);
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
         &__top{
           font-size: 20px;
           font-weight: bold;
           &--title{
             text-decoration: none;
-            color: #000000;
+            color: #2e2e1e;
           }
         }
         &__bottom{
